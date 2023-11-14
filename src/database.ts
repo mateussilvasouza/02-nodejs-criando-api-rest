@@ -3,9 +3,12 @@ import { knex as setupKnex, Knex } from 'knex'
 
 export const config: Knex.Config = {
   client: 'sqlite',
-  connection: {
-    filename: env.DB_URL,
-  },
+  connection:
+    env.DB_CLIENT === 'sqlite'
+      ? {
+          filename: env.DB_URL,
+        }
+      : env.DB_URL,
   useNullAsDefault: true,
   migrations: {
     extension: 'ts',

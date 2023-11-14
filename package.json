@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": ">=20 "
+  },
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "knex": "node --import tsx ./node_modules/.bin/knex",
@@ -19,7 +22,6 @@
     "fastify": "^4.24.3",
     "knex": "^3.0.1",
     "pg": "^8.11.3",
-    "sqlite3": "^5.1.6",
     "zod": "^3.22.4"
   },
   "devDependencies": {
@@ -27,6 +29,7 @@
     "@types/node": "^20.8.10",
     "@types/supertest": "^2.0.16",
     "eslint": "^8.52.0",
+    "sqlite3": "^5.1.6",
     "supertest": "^6.3.3",
     "tsup": "^7.2.0",
     "tsx": "^3.14.0",
